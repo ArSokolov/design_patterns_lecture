@@ -6,7 +6,7 @@ public class Display {
         // инициализация
     }
 
-    public static Display INSTANCE = new Display();
+    public static final Display INSTANCE = new Display();
 
     public void draw(Object obj){
         // отображаем

@@ -5,7 +5,8 @@ import _3_factory_method.message.MessageSender;
 
 public abstract class ProtocolWithMessageSending {
 
-    // помимо создания объектов занимается еще кучей полезных вещей
+    // помимо создания объектов занимается еще какими-то полезными вещами (например устанавливает соединение)
+    // а создание сендера зависит от этих вещей
 
     // Factory Method
     public abstract MessageSender createMessageSender();

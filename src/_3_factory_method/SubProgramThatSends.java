@@ -7,8 +7,8 @@ public class SubProgramThatSends {
 
     MessageSender sender;
 
-    public SubProgramThatSends(MessageSender sender) {
-        this.sender = sender;
+    public SubProgramThatSends(ProtocolWithMessageSending protocol) {
+        this.sender = protocol.createMessageSender();
     }
 
     public void run(){
