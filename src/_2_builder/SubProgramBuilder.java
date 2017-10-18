@@ -4,13 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SubProgramBuilder {
-
     private static int defaultPort = 1234;
-
     private boolean withGui = false;
-
     private int port = defaultPort;
-
     private Object someParameter1 = new Object();
     private Object someParameter2 = new Object();
     private Object someParameter3 = new Object();
@@ -56,6 +52,14 @@ public class SubProgramBuilder {
     }
 
     public SubProgram build() {
-        return new SubProgram(withGui, port, new KeyProcessor(keyBindings, ignoredKeys), someParameter1, someParameter2, someParameter3, someParameter4);
+        return new SubProgram(
+                withGui,
+                port,
+                new KeyProcessor(keyBindings, ignoredKeys),
+                someParameter1,
+                someParameter2,
+                someParameter3,
+                someParameter4
+        );
     }
 }

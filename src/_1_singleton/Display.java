@@ -2,13 +2,9 @@ package _1_singleton;
 
 public class Display {
 
-    private Display(){
-        // инициализация
-    }
+    private Display(){ /* инициализация*/ }
 
     public static final Display INSTANCE = new Display();
 
-    public void draw(Object obj){
-        // отображаем
-    }
+    public void draw(Object obj){ /* отображаем */ }
 }

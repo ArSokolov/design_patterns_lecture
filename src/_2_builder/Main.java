@@ -10,10 +10,7 @@ public class Main {
         SubProgram someSubProgram1_1 = new SubProgram(
                 true,
                 9000,
-                new KeyProcessor(
-                        Arrays.asList("w", "s"),
-                        Collections.emptyList()
-                ),
+                new KeyProcessor(Arrays.asList("w", "s"), Collections.emptyList()),
                 null,
                 null,
                 null,
@@ -23,10 +20,7 @@ public class Main {
         SubProgram someSubProgram2_1 = new SubProgram(
                 false,
                 8000,
-                new KeyProcessor(
-                        Collections.singletonList("e"),
-                        Collections.emptyList()
-                ),
+                new KeyProcessor(Collections.singletonList("e"), Collections.emptyList()),
                 null,
                 null,
                 null,
@@ -35,18 +29,19 @@ public class Main {
 
 
 
-        SubProgramBuilder builder1 = new SubProgramBuilder();
 
-        SubProgram someSubProgram1_2 = builder1
+
+        SubProgramBuilder builder = new SubProgramBuilder();
+
+        SubProgram someSubProgram1_2 = builder
                 .withGui(true)
                 .port(9000)
                 .responseToKey("w")
                 .responseToKey("a")
                 .build();
 
-        SubProgramBuilder builder2 = new SubProgramBuilder();
 
-        SubProgram someSubProgram2_2 = builder2
+        SubProgram someSubProgram2_2 = new SubProgramBuilder()
                 .port(8000)
                 .responseToKey("e")
                 .build();
